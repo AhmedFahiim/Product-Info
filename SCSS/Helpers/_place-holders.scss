@@ -1,0 +1,35 @@
+@use "../Helpers/Variables" as *;
+
+%section-part-name {
+  .section-part-name {
+    @extend %gradient-text;
+    position: relative;
+    width: fit-content;
+    font-size: 14px;
+    letter-spacing: 2px;
+    padding-bottom: 2px;
+    margin-bottom: 30px;
+    font-weight: bold;
+    &::after {
+      position: absolute;
+      content: "";
+      top: 115%;
+      left: 0;
+      width: 40%;
+      height: 1px;
+      background-color: $Sec-color;
+    }
+  }
+}
+%over-lay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+%gradient-text {
+  background: $Main-Gradient;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

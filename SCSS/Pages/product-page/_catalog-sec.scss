@@ -1,0 +1,165 @@
+@use "../../Helpers/Variables" as *;
+@use "../../../SCSS/Helpers/place-holders" as *;
+@use "../../../SCSS/Helpers/Mixins" as *;
+@use "../../Components/section-header" as *;
+
+.product_catalog_sec {
+  position: relative;
+  padding: 120px 0;
+  .product-catalog-gallery {
+    .container {
+      @extend %section-part-name;
+    }
+  }
+  .product-extra-info {
+    @extend %section-part-name;
+    padding-top: 100px;
+    .row {
+      margin-top: 60px;
+      justify-content: space-between;
+      align-items: flex-start;
+      .nav-bar {
+        background-color: $Light-Navy;
+        padding: 35px 25px;
+        border-radius: 8px;
+        border: 1px solid rgba($White, 0.3);
+        .product-info-sections {
+          @include flex(column, flex-start, flex-start);
+          gap: 30px;
+          .info-section-list-item {
+            width: fit-content;
+            color: $White;
+            font-size: 15px;
+            letter-spacing: 2px;
+            text-transform: capitalize;
+            transition: $transition;
+            cursor: pointer;
+            &:hover {
+              opacity: 0.8;
+            }
+            &.active {
+              @extend %gradient-text;
+              font-size: 22px;
+              font-weight: bold;
+            }
+          }
+        }
+      }
+      .product-infos-holder {
+        position: relative;
+        .product-info {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          opacity: 0;
+          z-index: -1;
+          pointer-events: none;
+          transition: $transition + 0.3;
+          .product-info-type {
+            @extend %gradient-text;
+            width: fit-content;
+            margin: auto;
+            text-transform: capitalize;
+            font-size: 35px;
+            letter-spacing: 2px;
+          }
+          .info-holder {
+            margin-top: 50px;
+            .row {
+              margin: 0 !important;
+            }
+          }
+          .info {
+            .info-head {
+              color: $White;
+              font-size: 16px;
+              text-transform: capitalize;
+              letter-spacing: 2px;
+              margin-bottom: 25px;
+            }
+            .info-category {
+              font-size: 14px;
+              color: rgba($White, 0.6);
+              text-decoration: underline;
+              margin-bottom: 12px;
+            }
+            .info-details {
+              .info-details-list-item {
+                margin-bottom: 20px;
+                .list-icon {
+                  @extend %gradient-text;
+                  margin-right: 8px;
+                }
+                .info-details-text {
+                  color: $White;
+                }
+              }
+            }
+            &.deodorizer {
+              .categories-holder {
+                @include flex(row, flex-start, center);
+                .standered-holder,
+                .uv-holder {
+                  flex-basis: 50%;
+                }
+              }
+            }
+          }
+          &.active {
+            opacity: 1;
+            z-index: 2;
+            pointer-events: auto;
+          }
+        }
+      }
+    }
+  }
+  .background-div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 66%;
+    opacity: 0.2;
+    background-image: radial-gradient(
+      at center right,
+      #0a89ff 0%,
+      #121228 100%
+    );
+    z-index: -1;
+  }
+}
+
+// start media at mobile screens
+@include media(MobileToLarge) {
+  .product_catalog_sec {
+    .product-extra-info {
+      .row {
+        gap: 50px;
+        .nav-bar {
+          width: 80%;
+          margin: auto;
+          .product-info-sections {
+            align-items: center;
+          }
+        }
+        .product-infos-holder {
+          min-height: 600px;
+          .product-info {
+            .product-info-type {
+              font-size: 25px !important;
+            }
+            .info {
+              text-align: center;
+            }
+          }
+        }
+      }
+    }
+    .background-div {
+      height: 50%;
+    }
+  }
+}

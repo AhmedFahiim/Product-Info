@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style/style.css" />
+    <!-- link font awesome library -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- link bootstrap grid system -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/css/bootstrap-grid.min.css"
+      integrity="sha512-Aa+z1qgIG+Hv4H2W3EMl3btnnwTQRA47ZiSecYSkWavHUkBF2aPOIIvlvjLCsjapW1IfsGrEO3FU693ReouVTA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- link swiper library -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <!-- link AOS library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <title>Product Page</title>
+  </head>
+  <body>
+    <main>
+      <button class="scroll-top" id="scroll-top">
+        <i class="fa-solid fa-up-long arrow-up"></i>
+      </button>
+      <!-- 
+       Start header Section =======
+    -->
+      <header>
+        <div class="container">
+          <article class="logo">
+            <a href="#"> Oklin’s </a>
+          </article>
+          <article class="links-holder">
+            <ul class="links" id="links">
+              <li class="link-item">
+                <a href="#"> Commercial </a>
+              </li>
+              <li class="link-item">
+                <a href="#"> Small Scale </a>
+              </li>
+              <li class="link-item">
+                <a href="#"> Technology </a>
+              </li>
+              <li class="link-item">
+                <a href="#"> Company </a>
+              </li>
+              <li class="link-item contact">
+                <a href="#"> contact </a>
+              </li>
+            </ul>
+            <i class="fa-solid fa-bars bars"></i>
+          </article>
+        </div>
+      </header>
+      <!-- 
+       Start landing Section =======
+    -->
+      <section class="product_landing_sec">
+        <div class="container">
+          <article class="product-brief">
+            <h1 class="product-brief-text">
+              Oklin’s GG50s is ideal for businesses where a moderate volume of
+              food waste is generated per day like :
+            </h1>
+            <ul class="industry-apps-holder">
+              <li class="industry-app">
+                <i class="fa-solid fa-check industry-icon"></i>
+                <span class="industry-type">Shopping Centres</span>
+              </li>
+              <li class="industry-app">
+                <i class="fa-solid fa-check industry-icon"></i>
+                <span class="industry-type">Supermarkets</span>
+              </li>
+              <li class="industry-app">
+                <i class="fa-solid fa-check industry-icon"></i>
+                <span class="industry-type">Restaurants</span>
+              </li>
+              <li class="industry-app">
+                <i class="fa-solid fa-check industry-icon"></i>
+                <span class="industry-type">Schools</span>
+              </li>
+              <li class="industry-app">
+                <i class="fa-solid fa-check industry-icon"></i>
+                <span class="industry-type"> Hotels</span>
+              </li>
+            </ul>
+          </article>
+        </div>
+        <div class="over-lay"></div>
+      </section>
+      <!-- 
+       Start About Section =======
+    -->
+      <section class="product_about_sec">
+        <div class="product-section-head">
+          <h1 class="section-name">About Machine</h1>
+        </div>
+        <div class="container">
+          <section class="product-advantages-holder">
+            <article
+              class="product-info-holder"
+              data-aos="fade-right"
+              data-aos-duration="2000"
+            >
+              <p class="section-part-name">Machine Advantages:</p>
+              <p class="product-info-text">
+                The <span class="machine-name">GG50s</span> model series are
+                perfect for commercial applications. It’s equipped with
+                innovative features that simplifies the operating procedure for
+                an efficient waste reduction result.
+              </p>
+            </article>
+            <article
+              class="product-advantages-circles"
+              data-aos="fade-left"
+              data-aos-duration="1500"
+            >
+              <!-- hours -->
+              <article class="advantage-loader-holder">
+                <div class="circular-loader">
+                  <div
+                    class="loader-value"
+                    data-num="24"
+                    data-type="Hour"
+                  ></div>
+                </div>
+                <p class="product-advantage-name">Food waste to compost</p>
+              </article>
+              <!-- MAX -->
+              <article class="advantage-loader-holder center">
+                <div class="circular-loader">
+                  <div class="loader-value" data-num="90" data-type="Max"></div>
+                </div>
+                <p class="product-advantage-name">Max Reduction rate</p>
+              </article>
+              <!-- TONS -->
+              <article class="advantage-loader-holder">
+                <div class="circular-loader">
+                  <div
+                    class="loader-value"
+                    data-num="100"
+                    data-type="Tons"
+                  ></div>
+                </div>
+                <p class="product-advantage-name">
+                  food waste processed per year
+                </p>
+              </article>
+            </article>
+          </section>
+          <section
+            class="product-dimentions-holder"
+            data-aos="fade-up"
+            data-aos-duration="2000"
+          >
+            <p class="section-part-name">Machine Dimentions:</p>
+            <div class="product-dimention-image-holder" id="dimension">
+              <img
+                src="./images/product-gallery/machine-dim.png"
+                alt="product-dimention"
+              />
+            </div>
+          </section>
+          <img
+            class="decoration"
+            src="./images/decorations/decoration.png"
+            alt="decoration-image"
+          />
+        </div>
+      </section>
+      <!-- 
+       Start Catalog Section =======
+    -->
+      <section class="product_catalog_sec">
+        <div
+          class="catalog-content-holder"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+        >
+          <article class="product-section-head">
+            <h1 class="section-name">Machine Catalog</h1>
+          </article>
+          <article class="product-catalog-gallery">
+            <div class="container">
+              <p class="section-part-name">Machine Gallery:</p>
+              <div class="swiper">
+                <div class="swiper-wrapper">
+                  <!-- Slides -->
+                  <div class="swiper-slide">
+                    <img
+                      src="./images/product-gallery/slide1.png"
+                      alt="machine-image"
+                    />
+                  </div>
+                  <div class="swiper-slide">
+                    <img
+                      src="./images/product-gallery/slide2.png"
+                      alt="machine-image"
+                    />
+                  </div>
+                  <div class="swiper-slide">
+                    <img
+                      src="./images/product-gallery/slide3.png"
+                      alt="machine-image"
+                    />
+                  </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+              </div>
+            </div>
+          </article>
+          <article class="product-extra-info">
+            <div class="container">
+              <p class="section-part-name">Machine Extra Info.:</p>
+              <div class="row">
+                <article
+                  class="nav-bar col-lg-3"
+                  data-aos="fade-up"
+                  data-aos-duration="3000"
+                >
+                  >
+                  <ul class="product-info-sections">
+                    <li class="info-section-list-item active" data-type="facts">
+                      Quick Facts
+                    </li>
+                    <li class="info-section-list-item" data-type="consumption">
+                      Elec. Consumption
+                    </li>
+                    <li
+                      class="info-section-list-item"
+                      data-type="specifications"
+                    >
+                      Specifications
+                    </li>
+                    <li class="info-section-list-item" data-type="deodorizer">
+                      Deodorizer
+                    </li>
+                  </ul>
+                </article>
+                <article
+                  class="product-infos-holder col-lg-8"
+                  data-aos="fade-up"
+                  data-aos-duration="2000"
+                >
+                  <div class="product-info facts active">
+                    <h2 class="product-info-type">Quick Facts</h2>
+                    <div class="info-holder">
+                      <div class="row">
+                        <div class="info col-lg-4">
+                          <h3 class="info-head">input capacity</h3>
+                          <ul class="info-details">
+                            <li class="info-details-list-item">
+                              <i class="fa-solid fa-check list-icon"></i>
+                              <span class="info-details-text">125 kg/day </span>
+                            </li>
+                            <li class="info-details-list-item">
+                              <i class="fa-solid fa-check list-icon"></i>
+                              <span class="info-details-text"
+                                >275 lbs/day
+                              </span>
+                            </li>
+                            <li class="info-details-list-item">
+                              <i class="fa-solid fa-check list-icon"></i>
+                              <span class="info-details-text"
+                                >50 tons/year</span
+                              >
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="info col-lg-4">
+                          <h2 class="info-head">treatment time</h2>
+                          <ul class="info-details">
+                            <li class="info-details-list-item">
+                              <i class="fa-solid fa-check list-icon"></i>
+                              <span class="info-details-text">24 hours </span>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="info col-lg-4">
+                          <h2 class="info-head">avarge waste reduction</h2>
+                          <ul class="info-details">
+                            <li class="info-details-list-item">
+                              <i class="fa-solid fa-check list-icon"></i>
+                              <span class="info-details-text">80% – 90% </span>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="product-info consumption">
+                    <h2 class="product-info-type">Electricity Consumption</h2>
+                    <div class="info-holder">
+                      <div class="row">
+                        <div class="info col-lg-4">
+                          <h3 class="info-head">Electricity Consumption</h3>
+                          <ul class="info-details">
+                            <li class="info-details-list-item">
+                              <i class="fa-solid fa-check list-icon"></i>
+                              <span class="info-details-text"
+                                >Electricity Consumption
+                              </span>
+                            </li>
+                            <li class="info-details-list-item">
+                              <i class="fa-solid fa-check list-icon"></i>
+                              <span class="info-details-text"
+                                >Three Phase
+                              </span>
+                            </li>
+                            <li class="info-details-list-item">
+                              <i class="fa-solid fa-check list-icon"></i>
+                              <span class="info-details-text">200 – 480V </span>
+                            </li>
+                            <li class="info-details-list-item">
+                              <i class="fa-solid fa-check list-icon"></i>
+                              <span class="info-details-text">50/60 Hz</span>
+                            </li>
+                            <li class="info-details-list-item">
+                              <span class="info-details-text"
+                                >*All voltages frequencies supported
+                              </span>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="info col-lg-4">
+                          <h2 class="info-head">max power draw</h2>
+                          <ul class="info-details">
+                            <li class="info-details-list-item">
+                              <i class="fa-solid fa-check list-icon"></i>
+                              <span class="info-details-text">6 kW </span>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="info col-lg-4">
+                          <h2 class="info-head">Power Consumption</h2>
+                          <ul class="info-details">
+                            <li class="info-details-list-item">
+                              <i class="fa-solid fa-check list-icon"></i>
+                              <span class="info-details-text"
+                                >1,480 – 2,630 kWh/month
+                              </span>
+                            </li>
+                            <li class="info-details-list-item">
+                              <i class="fa-solid fa-check list-icon"></i>
+                              <span class="info-details-text"
+                                >Average – 2,135 kWh/month
+                              </span>
+                            </li>
+                            <li class="info-details-list-item">
+                              <span class="info-details-text"
+                                >*Actual consumption may vary
+                              </span>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="product-info specifications">
+                    <h2 class="product-info-type">Specifications</h2>
+                    <div class="info-holder">
+                      <div class="row">
+                        <div class="info col-lg-3">
+                          <h3 class="info-head">dimensions (MM.)</h3>
+                          <ul class="info-details">
+                            <li class="info-details-list-item">
+                              <i class="fa-solid fa-check list-icon"></i>
+                              <span class="info-details-text"
+                                >2,155 width
+                              </span>
+                            </li>
+                            <li class="info-details-list-item">
+                              <i class="fa-solid fa-check list-icon"></i>
+                              <span class="info-details-text"
+                                >1,010 depth
+                              </span>
+                            </li>
+                            <li class="info-details-list-item">
+                              <i class="fa-solid fa-check list-icon"></i>
+                              <span class="info-details-text"
+                                >1,330 height
+                              </span>
+                            </li>
+                            <li class="info-details-list-item">
+                              <i class="fa-solid fa-check list-icon"></i>
+                              <span class="info-details-text">50/60 Hz</span>
+                            </li>
+                            <li class="info-details-list-item">
+                              <span class="info-details-text"
+                                >*All voltages frequencies supported
+                              </span>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="info col-lg-3">
+                          <h2 class="info-head">dimensions (Inch.)</h2>
+                          <ul class="info-details">
+                            <li class="info-details-list-item">
+                              <i class="fa-solid fa-check list-icon"></i>
+                              <span class="info-details-text"
+                                >84.84 width
+                              </span>
+                            </li>
+                            <li class="info-details-list-item">
+                              <i class="fa-solid fa-check list-icon"></i>
+                              <span class="info-details-text"
+                                >39.76 depth
+                              </span>
+                            </li>
+                            <li class="info-details-list-item">
+                              <i class="fa-solid fa-check list-icon"></i>
+                              <span class="info-details-text"
+                                >52.36 height
+                              </span>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="info col-lg-3">
+                          <h2 class="info-head">Weight (KG.)</h2>
+                          <ul class="info-details">
+                            <li class="info-details-list-item">
+                              <i class="fa-solid fa-check list-icon"></i>
+                              <span class="info-details-text">660 kg </span>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="info col-lg-3">
+                          <h2 class="info-head">Weight (Poun.)</h2>
+                          <ul class="info-details">
+                            <li class="info-details-list-item">
+                              <i class="fa-solid fa-check list-icon"></i>
+                              <span class="info-details-text">1455 lbs </span>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="product-info deodorizer">
+                    <h2 class="product-info-type">Deodorizer</h2>
+                    <div class="info-holder">
+                      <div class="row">
+                        <div class="info deodorizer col-lg-6">
+                          <h3 class="info-head">dimensions (MM.)</h3>
+                          <div class="categories-holder">
+                            <div class="standered-holder">
+                              <p class="info-category">Standard Deodorizer</p>
+                              <ul class="info-details">
+                                <li class="info-details-list-item">
+                                  <i class="fa-solid fa-check list-icon"></i>
+                                  <span class="info-details-text"
+                                    >410 width
+                                  </span>
+                                </li>
+                                <li class="info-details-list-item">
+                                  <i class="fa-solid fa-check list-icon"></i>
+                                  <span class="info-details-text"
+                                    >580 depth</span
+                                  >
+                                </li>
+                                <li class="info-details-list-item">
+                                  <i class="fa-solid fa-check list-icon"></i>
+                                  <span class="info-details-text"
+                                    >980 height</span
+                                  >
+                                </li>
+                              </ul>
+                            </div>
+                            <div class="uv-holder">
+                              <p class="info-category">UV Deodorizer</p>
+                              <ul class="info-details">
+                                <li class="info-details-list-item">
+                                  <i class="fa-solid fa-check list-icon"></i>
+                                  <span class="info-details-text"
+                                    >665 width
+                                  </span>
+                                </li>
+                                <li class="info-details-list-item">
+                                  <i class="fa-solid fa-check list-icon"></i>
+                                  <span class="info-details-text"
+                                    >910 depth</span
+                                  >
+                                </li>
+                                <li class="info-details-list-item">
+                                  <i class="fa-solid fa-check list-icon"></i>
+                                  <span class="info-details-text"
+                                    >780 height</span
+                                  >
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="info deodorizer col-lg-6">
+                          <h3 class="info-head">dimensions (Inch.)</h3>
+                          <div class="categories-holder">
+                            <div class="standered-holder">
+                              <p class="info-category">Standard Deodorizer</p>
+                              <ul class="info-details">
+                                <li class="info-details-list-item">
+                                  <i class="fa-solid fa-check list-icon"></i>
+                                  <span class="info-details-text"
+                                    >20.08 width
+                                  </span>
+                                </li>
+                                <li class="info-details-list-item">
+                                  <i class="fa-solid fa-check list-icon"></i>
+                                  <span class="info-details-text"
+                                    >31.5 depth</span
+                                  >
+                                </li>
+                                <li class="info-details-list-item">
+                                  <i class="fa-solid fa-check list-icon"></i>
+                                  <span class="info-details-text"
+                                    >51.18 height</span
+                                  >
+                                </li>
+                              </ul>
+                            </div>
+                            <div class="uv-holder">
+                              <p class="info-category">UV Deodorizer</p>
+                              <ul class="info-details">
+                                <li class="info-details-list-item">
+                                  <i class="fa-solid fa-check list-icon"></i>
+                                  <span class="info-details-text"
+                                    >26.18 width
+                                  </span>
+                                </li>
+                                <li class="info-details-list-item">
+                                  <i class="fa-solid fa-check list-icon"></i>
+                                  <span class="info-details-text"
+                                    >35.83 depth</span
+                                  >
+                                </li>
+                                <li class="info-details-list-item">
+                                  <i class="fa-solid fa-check list-icon"></i>
+                                  <span class="info-details-text"
+                                    >30.71 height</span
+                                  >
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="background-div"></div>
+      </section>
+      <!-- 
+       Start live-experience Section =======
+    -->
+      <section class="product_live_experience">
+        <article class="video-holder">
+          <video autoplay muted loop>
+            <source src="./video/live-video.mp4" type="video/mp4" />
+            Your Device doese not support this video
+          </video>
+        </article>
+        <article class="live-experince-content-holder">
+          <div class="live-demo-text-holder">
+            <h3 class="live-demo-main-text">Explore a live demo journey</h3>
+            <p class="live-demo-sub-text">
+              Explore how the machine working in the reality..
+            </p>
+          </div>
+          <div class="play-button" id="play-video">
+            <i class="fa-solid fa-play play"></i>
+          </div>
+        </article>
+        <img
+          class="decoration"
+          src="./images/decorations/decoration.png"
+          alt="decoration-img"
+        />
+        <div class="over-lay"></div>
+        <div class="video-pop-up">
+          <div class="close-pop">
+            <button class="close">X</button>
+          </div>
+          <div class="iframe-holder">
+            <iframe
+              src="https://www.youtube.com/embed/BCrxbFByyaI"
+              title="How to use a composter"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+      </section>
+      <!-- 
+       Start other product Section =======
+    -->
+      <section class="other_products">
+        <article class="product-section-head">
+          <h1 class="section-name">Other Products</h1>
+        </article>
+        <div class="container">
+          <div class="row">
+            <article
+              class="product-cart-holder col-lg-4 col-md-6"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+            >
+              <div class="product-cart">
+                <div class="product-image-holder">
+                  <img
+                    src="./images/other-products/1.jpg"
+                    alt="product-image"
+                  />
+                </div>
+                <div class="product-data-holder">
+                  <div class="product-data">
+                    <p class="product-name">GG-10s</p>
+                    <p class="product-info">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Incidunt, quo!
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article
+              class="product-cart-holder col-lg-4 col-md-6"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              data-aos-delay="150"
+            >
+              <div class="product-cart">
+                <div class="product-image-holder">
+                  <img
+                    src="./images/other-products/2.jpg"
+                    alt="product-image"
+                  />
+                </div>
+                <div class="product-data-holder">
+                  <div class="product-data">
+                    <p class="product-name">GG-30s</p>
+                    <p class="product-info">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Incidunt, quo!
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article
+              class="product-cart-holder col-lg-4 col-md-6"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              data-aos-delay="300"
+            >
+              <div class="product-cart">
+                <div class="product-image-holder">
+                  <img
+                    src="./images/other-products/6.jpg"
+                    alt="product-image"
+                  />
+                </div>
+                <div class="product-data-holder">
+                  <div class="product-data">
+                    <p class="product-name">GG-50s</p>
+                    <p class="product-info">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Incidunt, quo!
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article
+              class="product-cart-holder col-lg-4 col-md-6"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              data-aos-delay="450"
+            >
+              <div class="product-cart">
+                <div class="product-image-holder">
+                  <img
+                    src="./images/other-products/3.jpg"
+                    alt="product-image"
+                  />
+                </div>
+                <div class="product-data-holder">
+                  <div class="product-data">
+                    <p class="product-name">GG-100s</p>
+                    <p class="product-info">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Incidunt, quo!
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article
+              class="product-cart-holder col-lg-4 col-md-6"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              data-aos-delay="600"
+            >
+              <div class="product-cart">
+                <div class="product-image-holder">
+                  <img
+                    src="./images/other-products/4.jpg"
+                    alt="product-image"
+                  />
+                </div>
+                <div class="product-data-holder">
+                  <div class="product-data">
+                    <p class="product-name">GG-300s</p>
+                    <p class="product-info">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Incidunt, quo!
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <article
+              class="product-cart-holder col-lg-4 col-md-6"
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              data-aos-delay="750"
+            >
+              <div class="product-cart">
+                <div class="product-image-holder">
+                  <img
+                    src="./images/other-products/5.jpg"
+                    alt="product-image"
+                  />
+                </div>
+                <div class="product-data-holder">
+                  <div class="product-data">
+                    <p class="product-name">GG-500s</p>
+                    <p class="product-info">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Incidunt, quo!
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+      <!-- 
+       Start Footer Section =======
+    -->
+      <footer data-aos="fade-right" data-aos-duration="1500">
+        <div class="container">
+          <div class="row">
+            <article class="column col-lg-4 col-md-6">
+              <h5 class="footer-column-head">About Oklin's</h5>
+              <p class="about-oklin">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Necessitatibus quibusdam sit nesciunt incidunt iste, optio illo,
+                error esse atque, cupiditate dolor quos mollitia doloribus hic.
+              </p>
+            </article>
+            <article class="column col-lg-4 col-md-6">
+              <div class="column-holder">
+                <h5 class="footer-column-head">Explore</h5>
+                <ul class="explore">
+                  <li class="footer-link">
+                    <a href="#"> Commercial </a>
+                  </li>
+                  <li class="footer-link">
+                    <a href="#"> Small Scale </a>
+                  </li>
+                  <li class="footer-link">
+                    <a href="#"> Technology </a>
+                  </li>
+                  <li class="footer-link">
+                    <a href="#"> Company </a>
+                  </li>
+                  <li class="footer-link">
+                    <a href="#"> Contact </a>
+                  </li>
+                </ul>
+              </div>
+            </article>
+            <article class="column col-lg-4 col-md-6">
+              <h5 class="footer-column-head">Contact</h5>
+              <address>
+                1616 Broadway NY, New York 10001
+                <br />
+                United States of America
+              </address>
+              <div class="mobile-number">
+                <a href="tel:+852 2110 2992">T +852 2110 2992</a>
+              </div>
+              <div class="mail">
+                <a href="mailto:info@oklin.com.hk">info@oklin.com.hk</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </footer>
+    </main>
+    <script src="./js/swiper.js" type="module"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/aos.js"></script>
+  </body>
+</html>

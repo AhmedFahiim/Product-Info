@@ -1,0 +1,15 @@
+@use "../../../SCSS/Helpers/Mixins" as *;
+.decoration {
+  position: absolute;
+  width: 300px;
+  height: 400px;
+  opacity: 0.4;
+  z-index: -1;
+}
+
+// hide it from mobile to large
+@include media(MobileToLarge) {
+  .decoration {
+    display: none;
+  }
+}

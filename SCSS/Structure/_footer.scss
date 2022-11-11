@@ -1,0 +1,115 @@
+/*------------------------------------*\
+    #Footer
+\*------------------------------------*/
+@use "../Helpers/Variables" as *;
+@use "../Helpers/Mixins" as *;
+
+footer {
+  padding: 80px 0 30px;
+  background: $Light-Navy;
+
+  .footer-column-head {
+    color: $White;
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+  }
+  .column {
+    padding: 0 25px;
+    &:first-child {
+      .about-oklin {
+        color: rgba($White, 0.7);
+        font-size: 15px;
+        line-height: 1.7;
+        margin-bottom: 20px;
+      }
+    }
+    &:nth-child(2) {
+      .column-holder {
+        width: 60%;
+        margin: auto;
+      }
+      .explore {
+        .footer-link {
+          position: relative;
+          margin-bottom: 9px;
+          text-transform: capitalize;
+          a {
+            position: relative;
+            left: 0;
+            display: block;
+            color: rgba($White, 0.7);
+            font-size: 17px;
+            letter-spacing: 1px;
+            transition: $transition + 0.2;
+            z-index: 1;
+          }
+          &::before {
+            position: absolute;
+            content: "";
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background: $Main-Gradient;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            opacity: 0;
+            transition: $transition + 0.2;
+          }
+          &:hover {
+            a {
+              left: 15px;
+              color: $White;
+            }
+            &::before {
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+    &:last-child {
+      address {
+        color: $White;
+        line-height: 1.5;
+      }
+      .mobile-number {
+        margin: 15px 0;
+        a {
+          color: rgba($White, 0.7);
+          transition: $transition;
+          &:hover {
+            color: $White;
+          }
+        }
+      }
+      .mail {
+        border-bottom: 1px solid $White;
+        width: fit-content;
+        a {
+          color: rgba($White, 0.7);
+          transition: $transition;
+          &:hover {
+            color: $White;
+          }
+        }
+      }
+    }
+  }
+}
+
+// start media at mobile
+@include media(mobile) {
+  footer {
+    .row {
+      gap: 50px;
+    }
+    .column:nth-child(2) {
+      .column-holder {
+        width: 100%;
+      }
+    }
+  }
+}

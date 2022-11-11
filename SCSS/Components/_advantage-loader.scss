@@ -1,0 +1,51 @@
+@use "../Helpers/Variables" as *;
+@use "../Helpers/Mixins" as *;
+
+.advantage-loader-holder {
+  @include flex(column, flex-start, center);
+  gap: 15px;
+  flex-basis: calc(100% / 3);
+  min-height: 170px;
+  &.center {
+    position: relative;
+    top: 80px;
+    transition: $transition + 0.3;
+    &:hover {
+      top: 0;
+    }
+  }
+  .circular-loader {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    &::before {
+      position: absolute;
+      content: "";
+      width: 80%;
+      height: 80%;
+      background: $Pure-Navy;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+    }
+    .loader-value {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 18px;
+      text-align: center;
+      font-weight: bold;
+      color: $White;
+    }
+  }
+  .product-advantage-name {
+    color: $White;
+    font-size: 15px;
+    text-transform: capitalize;
+    text-align: center;
+    line-height: 1.6;
+  }
+}

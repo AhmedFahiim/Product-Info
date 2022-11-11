@@ -1,0 +1,88 @@
+@use "../../Helpers/Variables" as *;
+@use "../../Helpers/place-holders" as *;
+@use "../../Helpers/Mixins" as *;
+
+.product_landing_sec {
+  position: relative;
+  height: 80vh;
+  background-image: url(../../../images/landing-sec/hero-bg.png);
+  background-size: cover;
+  .container {
+    position: relative;
+    height: 100%;
+    z-index: 1;
+    .product-brief {
+      position: absolute;
+      top: 60%;
+      transform: translateY(-50%);
+      width: 50%;
+      .product-brief-text {
+        font-size: 30px;
+        color: $White;
+        text-transform: capitalize;
+        line-height: 1.6;
+      }
+      .industry-apps-holder {
+        .industry-app {
+          color: $Sec-color;
+          font-size: 15px;
+          font-weight: bold;
+          letter-spacing: 2px;
+          margin-top: 15px;
+        }
+      }
+    }
+  }
+  .over-lay {
+    @extend %over-lay;
+    background-color: rgba($Pure-Navy, 0.8);
+  }
+}
+
+// start media at mobile
+@include media(MobileToLarge) {
+  .product_landing_sec {
+    .container {
+      .product-brief {
+        width: 90%;
+        text-align: center;
+        .product-brief-text {
+          font-size: 25px;
+        }
+      }
+      .industry-apps-holder {
+        margin-top: 25px;
+      }
+    }
+  }
+}
+
+// start media at small screens
+@include media(small) {
+  .product_landing_sec {
+    .container {
+      .industry-apps-holder {
+        @include flex(row, center, center);
+        flex-wrap: wrap;
+        .industry-app {
+          flex-basis: calc(100% / 3);
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+}
+
+// start media at medium screens
+@include media(medium) {
+  .product_landing_sec {
+    .container {
+      .product-brief {
+        width: 60%;
+        .product-brief-text {
+          font-size: 25px;
+        }
+      }
+    }
+  }
+}

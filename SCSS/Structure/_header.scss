@@ -1,0 +1,121 @@
+/*------------------------------------*\
+    #Header
+\*------------------------------------*/
+
+@use "../Helpers/Variables" as *;
+@use "../Helpers/Mixins" as *;
+header {
+  width: 100%;
+  position: absolute;
+  z-index: 3;
+  background: linear-gradient(
+    135deg,
+    rgba(#0a89ff, 0.3) 0%,
+    rgba(#121228, 0.3) 100%
+  );
+  padding: 40px 0;
+  transition: $transition + 0.5;
+  &.fixed {
+    position: fixed;
+    background-color: #fff;
+    z-index: 1000;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+  .container {
+    @include flex(row, space-between, center);
+  }
+  .logo {
+    flex-basis: 15%;
+    a {
+      color: $White;
+      font-size: 30px;
+    }
+  }
+  .links-holder {
+    flex: 1;
+  }
+  .links {
+    @include flex(row, flex-end, center);
+    .link-item {
+      margin-right: 30px;
+      font-size: 16px;
+      letter-spacing: 2px;
+      a {
+        color: $White;
+        text-transform: capitalize;
+        transition: $transition;
+        &.active,
+        &:hover {
+          opacity: 0.6;
+        }
+      }
+    }
+    &.fixed {
+      .link-item {
+        a {
+          color: $White;
+          text-transform: uppercase;
+          transition: $transition;
+          &.active,
+          &:hover {
+            color: $Sec-color;
+          }
+        }
+      }
+    }
+  }
+  .bars {
+    position: relative;
+    top: -4px;
+    color: $Sec-color;
+    font-size: 35px;
+    cursor: pointer;
+    display: none;
+  }
+}
+
+// start media queries
+@include media(MobileToLarge) {
+  header {
+    padding: 25px 0;
+    .logo {
+      flex-basis: 50%;
+    }
+
+    .links-holder {
+      text-align: right;
+      .links {
+        flex-direction: column;
+        position: absolute;
+        width: 100%;
+        top: 100%;
+        left: 0;
+        background-color: #fff;
+        text-align: center;
+        height: 0;
+        overflow: hidden;
+        transition: $transition;
+        .link-item {
+          width: 100%;
+          padding: 10px 0;
+          margin: 0;
+          a {
+            color: $Sec-color;
+          }
+          &:not(:last-child) {
+            border-bottom: 2px solid #ededed;
+          }
+        }
+        &.active {
+          height: 235px;
+          padding: 15px 0;
+          justify-content: flex-start;
+        }
+      }
+      .bars {
+        display: block;
+      }
+    }
+  }
+}
+// end media queries

@@ -1,0 +1,53 @@
+@use "../../Helpers/Variables" as *;
+@use "../../Helpers/Mixins" as *;
+.swiper {
+  position: relative;
+  width: 70%;
+  margin: auto;
+  padding-bottom: 30px;
+  overflow: hidden;
+  .swiper-slide {
+    img {
+      max-width: 100%;
+      width: 100%;
+      height: 600px;
+    }
+  }
+  .swiper-pagination {
+    position: relative;
+    top: 20px;
+    .swiper-pagination-bullet {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background-color: $Sec-color;
+    }
+    .swiper-pagination-bullet-active {
+      width: 16px;
+      height: 16px;
+      border: 2px solid $White;
+      transition: $transition;
+    }
+  }
+  .swiper-button-prev,
+  .swiper-button-next {
+    color: $Sec-color;
+  }
+  .swiper-button-prev {
+    left: -50px;
+  }
+  .swiper-button-next {
+    right: -50px;
+  }
+}
+
+// start media at mobile
+@include media(MobileToLarge) {
+  .swiper {
+    width: 80%;
+    .swiper-button-prev,
+    .swiper-button-next {
+      display: none;
+    }
+  }
+}

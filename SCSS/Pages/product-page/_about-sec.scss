@@ -1,0 +1,80 @@
+@use "../../Helpers/Variables" as *;
+@use "../../Helpers/Mixins" as *;
+@use "../../Helpers/place-holders" as *;
+@use "../../Components/section-header" as *;
+@use "../../Components/advantage-loader" as *;
+@use "../product-page/decoration-image" as *;
+
+// ---------------------------------------
+// ---------------------------------------
+.product_about_sec {
+  padding: 100px 0;
+  .container {
+    position: relative;
+    background-color: $Light-Navy;
+    padding: 60px 40px;
+    border-radius: 10px;
+    z-index: 1;
+    overflow: hidden;
+    .product-advantages-holder {
+      @include flex(row, space-between, center);
+      .product-info-holder {
+        flex-basis: 45%;
+        @extend %section-part-name;
+        .product-info-text {
+          color: $White;
+          font-size: 18px;
+          text-transform: capitalize;
+          line-height: 1.7;
+          .machine-name {
+            @extend %gradient-text;
+            font-size: 25px;
+            font-weight: bold;
+          }
+        }
+      }
+      .product-advantages-circles {
+        flex: 1;
+        @include flex(row, space-between, center);
+      }
+    }
+    .product-dimentions-holder {
+      @extend %section-part-name;
+      padding-top: 150px;
+      .product-dimention-image-holder {
+        text-align: center;
+        img {
+          position: relative;
+          width: 60%;
+          left: 55px;
+        }
+      }
+    }
+  }
+  .decoration {
+    bottom: 0;
+    left: 0;
+  }
+}
+
+// start media at mobile to large
+@include media(MobileToLarge) {
+  .product_about_sec {
+    .container {
+      padding: 20px;
+      .product-advantages-holder {
+        flex-direction: column;
+        gap: 50px;
+        .product-info-text {
+          text-align: center;
+        }
+      }
+      .product-dimentions-holder {
+        img {
+          width: 100% !important;
+          left: 0 !important;
+        }
+      }
+    }
+  }
+}

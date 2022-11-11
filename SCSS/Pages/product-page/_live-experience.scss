@@ -1,0 +1,156 @@
+@use "../../../SCSS/Helpers/Variables" as *;
+@use "../../../SCSS/Helpers/Mixins" as *;
+@use "../../../SCSS/Helpers/place-holders" as *;
+@use "./decoration-image" as *;
+
+.product_live_experience {
+  position: relative;
+  display: grid;
+  place-items: center;
+  height: 60vh;
+  margin: 100px 0;
+  .video-holder {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+  }
+  .live-experince-content-holder {
+    @include flex(column, flex-start, center);
+    gap: 50px;
+    position: relative;
+    z-index: 1;
+    .live-demo-text-holder {
+      text-align: center;
+      .live-demo-main-text {
+        color: $White;
+        font-size: 40px;
+        text-transform: capitalize;
+      }
+      .live-demo-sub-text {
+        color: rgba($White, 0.8);
+        font-size: 14px;
+        font-weight: bold;
+        margin-top: 15px;
+      }
+    }
+    .play-button {
+      position: relative;
+      display: grid;
+      place-items: center;
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      background: $Main-Gradient;
+      cursor: pointer;
+      .play {
+        color: $White;
+        font-size: 25px;
+        transition: $transition;
+      }
+      &::before {
+        position: absolute;
+        content: "";
+        background: $Main-Gradient;
+        width: 105%;
+        height: 105%;
+        border-radius: 50%;
+        z-index: -1;
+        animation: fade 2s infinite ease-in-out;
+      }
+    }
+  }
+  .decoration {
+    top: 89%;
+    left: 0;
+    transform: rotate(90deg);
+  }
+  .over-lay {
+    @extend %over-lay;
+    background-color: rgba($Pure-Navy, 0.5);
+  }
+  .video-pop-up {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($Pure-Navy, 0.8);
+    display: grid;
+    place-items: center;
+    opacity: 0;
+    z-index: -1;
+    pointer-events: none;
+    transition: $transition + 0.3;
+    .close-pop {
+      position: absolute;
+      top: 0;
+      right: 0;
+      cursor: pointer;
+      .close {
+        all: unset;
+        padding: 15px 20px;
+        background-color: Red;
+        color: $White;
+        font-size: 25px;
+        transition: $transition;
+        &:hover {
+          opacity: 0.5;
+        }
+      }
+    }
+    .iframe-holder {
+      height: 80%;
+      width: 60%;
+      margin: auto;
+      iframe {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    &.play {
+      opacity: 1;
+      z-index: 2;
+      pointer-events: auto;
+    }
+  }
+}
+
+@keyframes fade {
+  20% {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+  40% {
+    transform: scale(1.2);
+    opacity: 0.6;
+  }
+  60% {
+    transform: scale(1.3);
+    opacity: 0.4;
+  }
+  80% {
+    transform: scale(1.4);
+    opacity: 0.2;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+// start media at mobile screens
+@include media(MobileToLarge) {
+  .product_live_experience {
+    .video-pop-up {
+      .iframe-holder {
+        width: 90%;
+      }
+    }
+  }
+}

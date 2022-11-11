@@ -1,0 +1,28 @@
+// import global-rules
+@use "../SCSS/Structure/Global-rules" as *;
+
+// import main structures
+@use "../SCSS/Structure/header" as *;
+@use "../SCSS/Structure/footer" as *;
+
+// import Product-page Modules
+
+// import swiper
+@use "../SCSS/Pages/product-page/swiper" as *;
+
+// import scroll top button
+@use "../SCSS/Components/scroll-top" as *;
+//----------------------------- landing section
+@use "../SCSS/Pages/product-page/landing-sec" as *;
+
+//----------------------------- about section
+@use "../SCSS/Pages/product-page/about-sec" as *;
+
+//----------------------------- catalog section
+@use "../SCSS/Pages/product-page/catalog-sec" as *;
+
+//----------------------------- live Experience section
+@use "../SCSS/Pages/product-page/live-experience" as *;
+
+//----------------------------- Other Products section
+@use "../SCSS/Pages/product-page/other-products-sec" as *;
