@@ -16,8 +16,8 @@ function startLoading(ele, index, type, value, end) {
       value++;
       advantageValue[index].textContent = `${value} ${type}`;
       ele.style.background = `conic-gradient(
-        #02e0b8 ${type == "Hour" ? value * 15 : value * 3.6}deg,
-        #fff ${type == "Hour" ? value * 15 : value * 3.6}deg)`;
+        #02e0b8 ${type == "Hour" ? value * 15 : value * 4}deg,
+        #fff ${type == "Hour" ? value * 15 : value * 4}deg)`;
       if (value === end) {
         clearInterval(startLoading);
       }
